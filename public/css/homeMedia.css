@@ -1,0 +1,231 @@
+@media only screen and (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                                Section Home                                */
+  /* -------------------------------------------------------------------------- */
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5.4rem;
+  }
+
+  .div-home-text {
+    display: grid;
+  }
+
+  /* .div-home-text {
+    display: flex;
+    margin-top: -31rem;
+    margin-right: -2rem;
+  } */
+
+  .home-about-us-link {
+    display: none;
+  }
+
+  .home-title {
+    font-size: 4rem;
+    width: 220px;
+    margin-top: 1.1rem;
+  }
+
+  .div-home-img {
+    height: min-content;
+  }
+
+  .pri-img {
+    width: 15.4rem;
+  }
+
+  .sec-img {
+    width: 7.4rem;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                              Section About us                              */
+  /* -------------------------------------------------------------------------- */
+
+  .about-para {
+    font-size: 2rem;
+  }
+
+  .primary-link {
+    padding: 1.1rem 1.1rem;
+    font-size: 1rem;
+  }
+
+  .secondary-link {
+    padding: 1rem 1rem;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                              Section Features                              */
+  /* -------------------------------------------------------------------------- */
+
+  .div-features-btn {
+    gap: 0.6rem;
+  }
+
+  .features-btn {
+    padding: 1.4rem 3.2rem;
+    height: 1.9rem;
+    font-size: 1.2em;
+  }
+
+  .div-features-desc {
+    display: grid;
+    height: fit-content;
+    min-width: 50vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 3.6rem;
+  }
+
+  .div-feature-icon {
+    display: none;
+  }
+
+  .features-icon {
+    /* display: none; */
+    width: 7.2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .features-title {
+    font-size: 3.6rem;
+    margin-left: -2rem;
+  }
+
+  .desc-text {
+    font-size: 1.2rem;
+    margin-left: -2rem;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                              Section Portfilio                             */
+  /* -------------------------------------------------------------------------- */
+
+  .portfolio-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+  }
+
+  .div-multi-img {
+    width: 90vw;
+  }
+
+  .card-projects {
+    width: 30px;
+  }
+
+  .card-img-wrapper {
+    width: 17rem;
+    height: 22rem;
+    margin: 1.2rem;
+    scale: 1.275;
+    transform: translate(-100px);
+    opacity: 0.2;
+  }
+
+  .card-img {
+    width: 17rem;
+  }
+
+  .overlay-text {
+    font-size: 3rem;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                            Section Testimonials                            */
+  /* -------------------------------------------------------------------------- */
+
+  .testimonials {
+    align-items: center;
+    width: 50vw;
+    height: fit-content;
+  }
+
+  .testimonial-wrapper {
+    height: fit-content;
+  }
+
+  .arrow-review {
+    font-size: 3.2rem;
+  }
+
+  /* .testimonials {
+    grid-row: 1/2;
+  }
+
+  .arrow-left-review {
+    grid-row: 2/4;
+  }
+
+  .arrow-right-review {
+    grid-row: 2/4;
+  } */
+
+  .client-img {
+    width: 55px;
+    height: min-content;
+    padding: 0.6rem;
+    border-radius: 100000000rem;
+    background-color: var(--light-text-color);
+  }
+
+  .client-name {
+    font-size: 2.4rem;
+  }
+
+  .stars {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .div-review {
+    padding-top: 3rem;
+    font-size: 1.8rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-alignment {
+    margin-left: 0rem;
+  }
+
+  .email-logo {
+    width: 30rem;
+  }
+
+  .footer-project-links {
+    height: 35rem;
+  }
+
+  .footer-links-title {
+    font-size: 3.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .quick-link {
+    font-size: 1.4rem;
+  }
+
+  .top-icon {
+    font-size: 5.6rem;
+    margin-right: -3.1rem;
+    margin-bottom: -2rem;
+  }
+}
