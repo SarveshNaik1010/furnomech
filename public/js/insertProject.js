@@ -33,7 +33,7 @@ form.addEventListener("submit", async function (e) {
       <div class="form__group ma-bt-md"><label class="form__label" for="">Type of service</label><input class="form__input" id="text" type="text" value="" required="required" name="service" /></div>
       <div class="form__group form__photo-upload"><img class="form__user-photo" src="" alt="User photo" /><input class="form__upload" type="file" id="photo" name="imageCover" /><label for="photo">Choose Cover image </label></div>
       <div class="form__group form__photo-upload"><img class="form__user-photo" src="" alt="User photo" /><input class="form__upload" type="file" id="photo" name="photos" multiple /><label for="photo">Choose photos </label></div>
-      <div class="form__group right"><button class="btn btn--small btn--green">Save settings</button></div>
+      <div class="form__group right"><button class="btn btn-upload btn--small btn--green">Upload</button></div>
     </form>
     `;
 
@@ -41,8 +41,10 @@ form.addEventListener("submit", async function (e) {
     contentDiv.insertAdjacentHTML("afterbegin", markup);
 
     const uploadDataForm = document.querySelector(".form-project-data");
+    const btnUpload = document.querySelector(".btn-upload");
     uploadDataForm.addEventListener("submit", async function (e) {
       e.preventDefault();
+      btnUpload.textContent = "Uploading...";
       const projectDataForm = new FormData(this);
       const res = await axios({
         method: "POST",
@@ -50,7 +52,9 @@ form.addEventListener("submit", async function (e) {
         data: projectDataForm,
       });
     });
+    btnUpload.textContent = "Upload";
   } catch (error) {
     console.log(error);
+    btnUpload.textContent = error.message || "Error";
   }
 });
