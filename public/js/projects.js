@@ -41,7 +41,7 @@ const renderProjects = async function () {
                 <p class="project-text">${pro.projectDescription}</p><a class="secondary-link project-link" href="/${pro.slug}">view project</a>
               </div>
             </div>
-            <div class="div-project-img"><img class="project-img" src="https://www.piramalaranya.com/wp-content/uploads/2022/09/20220928-article-banner-01.jpg" alt=""/></div>
+            <div class="div-project-img"><img class="project-img" src="${pro.imageCover}" alt=""/></div>
           </div>
             `;
     }
