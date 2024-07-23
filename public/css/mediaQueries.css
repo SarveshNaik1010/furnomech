@@ -104,6 +104,40 @@
     font-size: 1.3rem;
   }
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-alignment {
+    margin-left: 0rem;
+  }
+
+  .email-logo {
+    width: 30rem;
+  }
+
+  .footer-project-links {
+    height: 35rem;
+  }
+
+  .footer-links-title {
+    font-size: 3.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .quick-link {
+    font-size: 1.4rem;
+  }
+
+  .top-icon {
+    font-size: 5.6rem;
+    margin-right: -3.1rem;
+    margin-bottom: -2rem;
+  }
+
   /* *********************************************** */
   /* Common elements */
   /* *********************************************** */
@@ -188,11 +222,6 @@
   }
 
   .map-address {
-    display: block;
-    width: 28rem;
-    /* margin: 4.8rem auto; */
-    margin-left: -2.4rem;
-    padding: 2.4rem;
   }
 
   .div-sub-title {
@@ -387,9 +416,15 @@
   /* -------------------------------------------------------------------------- */
   /*                               Contact Us Page                              */
   /* -------------------------------------------------------------------------- */
-  .map-address {
-    width: 90vw;
-    padding: 2rem;
+  .page-contact-us {
+    padding: 8rem 1.2rem 4.8rem 1.2rem;
+  }
+  .page-title {
+    margin-left: 1.8rem;
+  }
+
+  .form-contact-us {
+    margin: 0 1.2rem;
   }
 
   .form-contact-us {
@@ -401,9 +436,18 @@
     grid-column: 1;
   }
 
+  .input {
+    width: 90vw;
+  }
+
   .captcha-text,
   .captcha-lable-input {
-    font-size: 2.8rem;
+    font-size: 1.6rem;
+    width: min-content;
+  }
+
+  .captcha-sum {
+    width: 10ch;
   }
 
   .captcha {
@@ -421,41 +465,8 @@
   .btn-submit {
     font-size: 1.4rem;
   }
-}
-
-@media (max-width: 768px) {
   .map-address {
-    width: 95vw;
-    padding: 1.6rem;
-  }
-
-  .form-contact-us {
-    width: 95vw;
-    grid-template-columns: 1fr;
-  }
-
-  .form-message {
-    grid-column: 1;
-  }
-
-  .captcha-text,
-  .captcha-lable-input {
-    font-size: 1.8rem;
-  }
-
-  .captcha {
-    font-size: 1.6rem;
-  }
-
-  .captcha-sum {
-    font-size: 1.2rem;
-  }
-
-  .incorrect-message {
-    font-size: 1.8rem;
-  }
-
-  .btn-submit {
-    font-size: 1.2rem;
+    width: 88vw;
+    padding: 0rem;
   }
 }
