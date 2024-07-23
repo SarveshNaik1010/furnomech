@@ -82,29 +82,6 @@
   /*                               Section Footer                               */
   /* -------------------------------------------------------------------------- */
   .footer {
-    padding: 1.2rem;
-  }
-
-  .footer-logo {
-    width: 16rem;
-  }
-
-  .footer-links-title {
-    font-size: 2.8rem;
-  }
-
-  .div-quick-links {
-    place-items: start;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2.6rem;
-    row-gap: 2rem;
-  }
-
-  .quick-link {
-    font-size: 1.3rem;
-  }
-
-  .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
