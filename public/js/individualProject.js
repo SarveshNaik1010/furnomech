@@ -1,5 +1,4 @@
 "use strict";
-import { displayOverlayImage } from "./util.js";
 
 const carouselOverlayDiv = document.querySelector(".div-carousel-overlay");
 const carouselBlur = document.querySelector(".carousel-overlay-blur");

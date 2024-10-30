@@ -1,7 +1,5 @@
 "use strict";
 
-import { displayOverlayImage } from "./util.js";
-
 const divSidebar = document.querySelector(".div-sidebar-content");
 const divCategoryContent = document.querySelector(".div-content-category");
 const divCarouselOverlay = document.querySelector(".div-carousel-overlay");
