@@ -1,54 +1,58 @@
-:root{
-    
+:root {
 }
 
-::-webkit-scrollbar{
-    display: none;
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.page {
+  padding: 15rem 4.8rem 4.8rem 4.8rem;
 }
 
-.page{
-    padding: 15rem 4.8rem 4.8rem 4.8rem;
+.div-page-title {
 }
 
-.div-page-title{
+.page-title {
+  font-size: 9.6rem;
+  color: var(--dark-text-color);
 }
 
-.page-title{
-    font-size: 9.6rem;
-    color: var(--dark-text-color);
+.div-sub-title {
+  margin: 3.2rem 0;
 }
 
-.div-sub-title{
-    margin: 3.2rem 0;
+.page-sub-title {
+  font-size: 6.8rem;
+  color: var(--dark-text-color);
 }
 
-.page-sub-title{
-    font-size: 6.8rem;
-    color: var(--dark-text-color);
+.page-content {
+  padding: 3.2rem 3.6rem;
 }
 
-.page-content{
-    padding: 3.2rem 3.6rem;
+/* Image carousal */
+/* 
+.div-carousel-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  overflow: scroll;
 }
 
-/* Image carousel */
-
-.div-carousel-overlay{
-    position: fixed;
-    width: 100%;
-    height: 1000%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-.carousel-overlay-blur{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, var(--blur-bg-color), var(--dull-text-color) );
-    z-index: -1;
+.carousel-overlay-blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    var(--blur-bg-color),
+    var(--dull-text-color)
+  );
+  z-index: -1;
 }
 
 .carousel-overlay {
@@ -62,11 +66,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  /* width: 95vw; */
+  width: 95vw;
+  overflow: scroll;
 }
 
-.scroll-arrow{
-    font-size: 4.2rem;
+.scroll-arrow {
+  font-size: 4.2rem;
 }
 
 .overlay-content {
@@ -74,26 +79,103 @@
   display: flex;
   justify-content: start;
   gap: 2.4rem;
-  /* overflow-x: scroll; */
-  /* width: 64rem; */
-  height: 55rem;
-  /* overflow: hidden; */
   background-color: var(--sub-text-color);
-  /* padding: 1.8rem; */
-  scroll-behavior: smooth;
+  background-color: red;
+  padding: 1.8rem;
+  height: 55rem;
+  width: 100vw;
+  overflow: scroll;
 }
 
-.btn-close-carousel{
-    position: fixed;
-    top: 0;
-    font-size: 4.2rem;
+.btn-close-carousel {
+  position: fixed;
+  top: 0;
+  font-size: 4.2rem;
 }
 
 .imgCrousel {
-  /* width: 64rem; */
-  /* height: 50rem; */
+  width: 64rem;
+  height: 50rem;
 }
 
-.hidden-carousel{
-    display: none;
+.imgC {
+  height: 50rem;
+  overflow: scroll;
+}
+
+.hidden-carousel {
+  display: none;
+} */
+
+/* ****************************************************************** */
+/* Image carousel */
+/* ****************************************************************** */
+
+.div-carousel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-overlay-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    var(--blur-bg-color),
+    var(--dull-text-color)
+  );
+  z-index: -1;
+}
+
+.carousel-overlay {
+  display: flex;
+  align-items: start;
+  gap: 3.2rem;
+  z-index: 2;
+}
+
+.scroll-arrow {
+  font-size: 4.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay-content {
+  width: 90%;
+  display: flex;
+  gap: 2.4rem;
+  background-color: var(--sub-text-color);
+  padding: 1.8rem;
+  max-height: 80vh;
+  overflow-x: auto;
+}
+
+.btn-close-carousel {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 4.2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.imgC {
+  max-height: 70vh;
+  object-fit: contain;
+  transition: all 0.2s;
+}
+
+.hidden-carousel {
+  display: none;
 }

@@ -46,14 +46,14 @@ exports.optimizeImages = async (req, res, next) => {
   if (!req.files) return next();
   const { imageCover: ic, photos: ph } = req.files;
   req.body.imageCover = (
-   ( await cloudinary.uploader.upload(ic[0].path, (err, res) => {
+    await cloudinary.uploader.upload(ic[0].path, (err, res) => {
       if (err) {
         return next(
           new AppError("Issue in uploading photo, please try again later", 500)
         );
       }
     })
-  )).url;
+  ).url;
   console.log(req.body.imageCover);
 
   req.body.photos = await Promise.all(

@@ -24,17 +24,53 @@ form.addEventListener("submit", async function (e) {
     console.log("Authenticated");
 
     const markup = `
-    <form class="form form-project-data">
-      <div class="form__group"><label class="form__label" for="">Project Name</label><input class="form__input" id="name" type="text" value="" required="required" name="projectName" /></div>
-      <div class="form__group ma-bt-md"><label class="form__label" for="">client Name</label><input class="form__input" id="email" type="text" value="" required="required" name="clientName" /></div>
-      <div class="form__group ma-bt-md"><label class="form__label" for="">Project description</label><input class="form__input" id="email" type="text" value="" required="required" name="projectDescription" /></div>
-      <div class="form__group ma-bt-md"><label class="form__label" for="">Location</label><input class="form__input" id="text" type="text" value="" required="required" name="location" /></div>
-      <div class="form__group ma-bt-md"><label class="form__label" for="">Duration</label><input class="form__input" id="text" type="text" value="" required="required" name="duration" /></div>
-      <div class="form__group ma-bt-md"><label class="form__label" for="">Type of service</label><input class="form__input" id="text" type="text" value="" required="required" name="service" /></div>
-      <div class="form__group form__photo-upload"><img class="form__user-photo" src="" alt="User photo" /><input class="form__upload" type="file" id="photo" name="imageCover" /><label for="photo">Choose Cover image </label></div>
-      <div class="form__group form__photo-upload"><img class="form__user-photo" src="" alt="User photo" /><input class="form__upload" type="file" id="photo" name="photos" multiple /><label for="photo">Choose photos </label></div>
-      <div class="form__group right"><button class="btn btn-upload btn--small btn--green">Upload</button></div>
-    </form>
+      <form class="form form-project-data">
+        <div class="form__group">
+          <label class="form__label" for="projectName">Project Name</label>
+          <input class="form__input" id="projectName" type="text" required name="projectName" />
+        </div>
+        
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="clientName">Client Name</label>
+          <input class="form__input" id="clientName" type="text" required name="clientName" />
+        </div>
+        
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="projectDescription">Project Description</label>
+          <input class="form__input" id="projectDescription" type="text" required name="projectDescription" />
+        </div>
+        
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="location">Location</label>
+          <input class="form__input" id="location" type="text" required name="location" />
+        </div>
+        
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="duration">Duration</label>
+          <input class="form__input" id="duration" type="text" required name="duration" />
+        </div>
+        
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="service">Type of Service</label>
+          <input class="form__input" id="service" type="text" required name="service" />
+        </div>
+        
+        <div class="form__group form__photo-upload">
+          <img class="form__user-photo" src="" alt="Cover image preview" />
+          <input class="form__upload" type="file" id="coverImage" name="imageCover" />
+          <label for="coverImage">Choose Cover Image</label>
+        </div>
+        
+        <div class="form__group form__photo-upload">
+          <img class="form__user-photo" src="" alt="Photos preview" />
+          <input class="form__upload" type="file" id="photos" name="photos" multiple />
+          <label for="photos">Choose Photos</label>
+        </div>
+        
+        <div class="form__group right">
+          <button class="btn btn-upload btn--small btn--green">Upload</button>
+        </div>
+      </form>
     `;
 
     contentDiv.innerHTML = "";
@@ -46,6 +82,7 @@ form.addEventListener("submit", async function (e) {
       e.preventDefault();
       btnUpload.textContent = "Uploading...";
       const projectDataForm = new FormData(this);
+      console.log(this);
       const res = await axios({
         method: "POST",
         url: "/api/v1/project",

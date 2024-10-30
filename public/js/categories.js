@@ -1,9 +1,14 @@
 "use strict";
+import { displayOverlayImage } from "./util.js";
 
 const divSidebar = document.querySelector(".div-sidebar-content");
 const divCategoryContent = document.querySelector(".div-content-category");
 const divCarouselOverlay = document.querySelector(".div-carousel-overlay");
 const contentDiv = document.querySelector(".overlay-content");
+
+const carouselOverlayDiv = document.querySelector(".div-carousel-overlay");
+const carouselBlur = document.querySelector(".carousel-overlay-blur");
+const carouselOverlay = document.querySelector(".overlay-content");
 
 const loadList = async function () {
   const data = (
@@ -72,22 +77,40 @@ const displayCategory = function (data, time) {
   );
 
   const imgCategory = document.querySelectorAll(".image-category");
+  const imgArray = data.map((d, i) => d.imagePath);
   imgCategory.forEach((img, i) => {
     img.addEventListener("click", function () {
-      const imgArray = data.map((d, i) => d.imagePath);
-
-      const imgSrc = img.children[0].src.split("/");
-      console.log(imgSrc[imgSrc.length - 1]);
-      accessCarousel(
-        carouselOverlayDiv,
-        carouselOverlay,
-        imgSrc[imgSrc.length - 1],
-        data.photos,
+      console.log(imgArray[i]);
+      displayOverlayImage(
+        divCarouselOverlay,
+        contentDiv,
+        img.src,
+        imgArray,
         "categoryImages"
       );
     });
   });
 };
+
+// manage overlay content
+
+const btnClose = document.querySelector(".btn-close-carousel");
+const btnScrollLeft = document.querySelector(".scroll-left");
+const btnScrollRight = document.querySelector(".scroll-right");
+
+[carouselBlur, btnClose].forEach((btn) =>
+  btn.addEventListener("click", function () {
+    carouselOverlayDiv.style.display = "none";
+  })
+);
+
+btnScrollLeft.addEventListener("click", function () {
+  contentDiv.scrollBy({ left: -200, behavior: "smooth" });
+});
+
+btnScrollRight.addEventListener("click", function () {
+  contentDiv.scrollBy({ left: 200, behavior: "smooth" });
+});
 
 const buttonControl = function () {
   // 1. Selecting buttons
