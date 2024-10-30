@@ -1,4 +1,4 @@
-export function displayOverlayImage(
+function displayOverlayImage(
   overlayDiv,
   overlay,
   imgSrc,
