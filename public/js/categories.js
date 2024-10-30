@@ -1,4 +1,5 @@
 "use strict";
+
 import { displayOverlayImage } from "./util.js";
 
 const divSidebar = document.querySelector(".div-sidebar-content");
