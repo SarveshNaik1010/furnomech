@@ -85,6 +85,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.2rem;
   }
 
   .address-alignment {
@@ -105,8 +106,15 @@
     padding-bottom: 2rem;
   }
 
+  .div-quick-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .quick-link {
     font-size: 1.4rem;
+    place-self: start;
+    margin: 0 0.8rem;
   }
 
   .top-icon {
@@ -118,6 +126,10 @@
   /* *********************************************** */
   /* Common elements */
   /* *********************************************** */
+  .page {
+    padding-left: 2.4rem;
+  }
+
   .section-title {
     font-size: 3rem;
   }
@@ -252,6 +264,7 @@
   /* -------------------------------------------------------------------------- */
 
   .mainp-header {
+    width: 90vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -324,6 +337,10 @@
   /* -------------------------------------------------------------------------- */
   /*                               Categories Page                              */
   /* -------------------------------------------------------------------------- */
+  .page {
+    padding-left: 0;
+  }
+  
   .page-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -396,7 +413,7 @@
   .page-contact-us {
     padding: 8rem 1.2rem 4.8rem 1.2rem;
   }
-  
+
   .page-title {
     margin-left: 1.8rem;
   }

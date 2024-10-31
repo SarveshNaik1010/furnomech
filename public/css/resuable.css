@@ -31,7 +31,7 @@
 body {
   margin: 0;
   background-color: #f9f1ec;
-  height: fit-content;
+  height: min-content;
 }
 
 h1,

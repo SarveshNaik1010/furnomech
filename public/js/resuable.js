@@ -44,11 +44,11 @@ const openMenu = function () {
   // logo.style.transform = `translate(-50%)`;
 
   // Timmed Alignment
-  // setTimeout(
-  //   () =>
-  //     (logo.src = `https://res.cloudinary.com/dvq2kdv1z/image/upload/v1721710193/white-furnomech-logo_rqlpth.png`),
-  //   50
-  // );
+  setTimeout(
+    () =>
+      (logo.src = `https://res.cloudinary.com/dvq2kdv1z/image/upload/v1721710193/white-furnomech-logo_rqlpth.png`),
+    50
+  );
   setTimeout(() => {
     link.forEach((e, i) => {
       setTimeout(() => (e.style.transform = `rotateX(0deg)`), 100 * i);
@@ -67,11 +67,12 @@ const closeMenu = function () {
   });
 
   // Timmed changes & alignment
-  // setTimeout(
-  //   () =>
-  //     (logo.src = `https://res.cloudinary.com/dvq2kdv1z/image/upload/v1721710287/main-furnomech-logo_rvgfia.png`),
-  //   timePri + timeSec
-  // );
+  setTimeout(
+    () =>
+      (logo.src = `https://res.cloudinary.com/dvq2kdv1z/image/upload/v1721710287/main-furnomech-logo_rvgfia.png`),
+    timePri + timeSec
+  );
+
   setTimeout(() => (navigation.style.transform = `translateY(-100%)`), 1000);
   setTimeout(() => {
     btnMenue.name = `menu-outline`;
