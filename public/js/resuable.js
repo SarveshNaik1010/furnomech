@@ -5,6 +5,7 @@
 const btnMenue = document.querySelector(".btn-menu");
 const nav = document.querySelector(".nav");
 const navigation = document.querySelector(".navigation");
+const linkTestimonial = document.querySelector(".link-testimonial");
 const home = document.querySelector(".section-home");
 const logo = document.querySelector(".logo");
 const link = document.querySelectorAll(".link");
@@ -184,6 +185,8 @@ const observeLink = function (entries, observer) {
   });
 };
 const linkObserver = new IntersectionObserver(observeLink, optionLink);
+
+linkTestimonial.addEventListener("click", closeMenu);
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Section Reveal
