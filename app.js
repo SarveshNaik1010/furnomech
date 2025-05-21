@@ -9,6 +9,7 @@ const contactRouter = require("./router/contactRouter");
 const authRouter = require("./router/authRouter");
 const categoryRouter = require("./router/categoryRouter");
 const cors = require("cors");
+const { getToken, validateToken } = require("./temp");
 
 const app = express();
 
@@ -41,6 +42,9 @@ app.use("/error", (req, res, next) => {
 });
 
 app.use("/", viewRouter);
+
+app.post("/get-token", getToken);
+app.post("/authenticate", validateToken);
 
 app.use("*", (req, res, next) => {
   res.status(404).render("error");
