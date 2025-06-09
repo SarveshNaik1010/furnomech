@@ -4,12 +4,16 @@ const projectDiv = document.querySelector(".div-projects");
 
 const renderProjects = async function () {
   // 1. Get all the projects
+  console.log("Finding...");
+
   const res = (
     await axios({
       method: "GET",
       url: `/api/v1/project`,
     })
-  ).data.projects;
+  )?.data?.projects;
+
+  console.log(res);
 
   // projectDiv.innerHTML = '';
   // 2. Generate markup
