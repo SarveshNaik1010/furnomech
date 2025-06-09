@@ -10,6 +10,8 @@ const authRouter = require("./router/authRouter");
 const categoryRouter = require("./router/categoryRouter");
 const cors = require("cors");
 const { getToken, validateToken } = require("./temp");
+const Admin = require("./model/adminModel");
+const { insertOne } = require("./controller/handlerFactory");
 
 const app = express();
 

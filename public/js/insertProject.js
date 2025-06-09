@@ -2,24 +2,33 @@
 
 const form = document.querySelector(".admin-login");
 const contentDiv = document.querySelector(".content-div-admin");
+const btnUpload = document.querySelector(".btn-upload");
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
+  const formData = new FormData(form);
   try {
-    const admin = (
-      await axios({
-        method: "GET",
-        url: "/auth",
-      })
-    ).data.data[0];
-    const formData = new FormData(form);
+    const res = await axios({
+      method: "POST",
+      url: "/auth",
+      data: {
+        username: formData.get("username"),
+        password: formData.get("password"),
+      },
+    });
 
-    // if (!
-    //   (formData.get("username") === admin.adminName &&
-    //   formData.get("password") === admin.adminPassword)
-    // ) {
-    //   throw new Error("Incorrect username or password")
-    // }
+    const data = res.data;
+
+    if (!data?.isAuthenticated) {
+      const markup = `
+        <div class="error">
+          <p class="error__message">Invalid username or password. Please try again.</p>
+        </div>
+      `;
+      contentDiv.innerHTML = "";
+      contentDiv.insertAdjacentHTML("afterbegin", markup);
+      return;
+    }
 
     console.log("Authenticated");
 
@@ -77,7 +86,6 @@ form.addEventListener("submit", async function (e) {
     contentDiv.insertAdjacentHTML("afterbegin", markup);
 
     const uploadDataForm = document.querySelector(".form-project-data");
-    const btnUpload = document.querySelector(".btn-upload");
     uploadDataForm.addEventListener("submit", async function (e) {
       e.preventDefault();
       btnUpload.textContent = "Uploading...";
@@ -92,6 +100,7 @@ form.addEventListener("submit", async function (e) {
     btnUpload.textContent = "Upload";
   } catch (error) {
     console.log(error);
-    btnUpload.textContent = error.message || "Error";
+    // btnUpload.textContent = error.message || "Error";
+    btnUpload.textContent = error.response.data.message || "Error";
   }
 });

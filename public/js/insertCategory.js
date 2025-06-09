@@ -14,14 +14,14 @@ form.addEventListener("submit", async function (e) {
     ).data.data[0];
     const formData = new FormData(form);
 
-    // if (
-    //   !(
-    //     formData.get("username") === admin.adminName &&
-    //     formData.get("password") === admin.adminPassword
-    //   )
-    // ) {
-    //   throw new Error("Incorrect username or password");
-    // }
+    if (
+      !(
+        formData.get("username") === admin.adminName &&
+        formData.get("password") === admin.adminPassword
+      )
+    ) {
+      throw new Error("Incorrect username or password");
+    }
 
     console.log("Authenticated");
 
