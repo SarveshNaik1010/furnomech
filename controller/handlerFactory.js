@@ -3,6 +3,7 @@ const Project = require("../model/projectModel");
 exports.getAll = (Model) => {
   return async function (req, res, next) {
     try {
+      console.log('FINDING ITEMS...')
       const data = await Model.find();
       console.log(data);
 
