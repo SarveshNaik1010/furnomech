@@ -4,6 +4,7 @@ exports.getAll = (Model) => {
   return async function (req, res, next) {
     try {
       const data = await Model.find();
+      console.log(data);
 
       const projects = data.map(
         (d, i) => d
