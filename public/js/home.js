@@ -270,79 +270,49 @@ const overText = document.querySelectorAll(".card-over-text");
 ////////////////////////////////////////////////////////////////////////////////////////////
 const testimonials = [
   {
-    clientName: "Charlie Puth",
-    clientImg: "",
+    clientName: "Amit Roy",
+    clientImg: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
-    review: "We Don't Talk Anymore",
+    review:
+      "Working with the team was a game-changer for our digital strategy. Their attention to detail, clear communication, and innovative solutions helped us launch our platform faster than expected. Highly recommend for anyone looking for reliable tech partners.",
   },
   {
-    clientName: "Taylor Swift",
-    clientImg:
-      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTAPp4Cyx0uAkK3RupL-EZJ4z-BPsC01kCIoBIbfPlyW208WBn_",
-    rating: 3,
-    review: "It's me, hi, I'm the problem, it's me",
-  },
-  {
-    clientName: "Pritam Chakraborty",
-    clientImg:
-      "https://i.scdn.co/image/ab6761610000e5ebcb6926f44f620555ba444fca",
+    clientName: "Samantha D'Souza",
+    clientImg: "https://randomuser.me/api/portraits/women/44.jpg",
     rating: 4,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
+      "I was genuinely impressed by the professionalism and efficiency. The team not only delivered on time but also exceeded our expectations with a sleek and intuitive interface.",
   },
   {
-    clientName: "Drake",
-    clientImg:
-      "https://hips.hearstapps.com/hmg-prod/images/drake_photo_by_prince_williams_wireimage_getty_479503454.jpg",
-    rating: 1,
-    review: `
-    … Kiki, do you love me? Are you riding?
-Say you'll never ever leave from beside me
-'Cause I want ya, and I need ya
-And I'm down for you always
-… KB, do you love me? Are you riding?
-Say you'll never ever leave from beside me
-'Cause I want ya, and I need ya
-And I'm down for you always
-… Look, the new me is really still the real me
-I swear you gotta feel me before they try and kill me
-They gotta make some choices, they runnin' out of options
-'Cause I've been going off and they don't know when it's stopping
-    `,
+    clientName: "Rahul Mehta",
+    clientImg: "https://randomuser.me/api/portraits/men/76.jpg",
+    rating: 5,
+    review:
+      "They understood our vision perfectly and turned it into a powerful digital product. The backend was smooth, and the user experience was top-notch.",
   },
   {
-    clientName: " Harry Styles",
-    clientImg:
-      "https://static1.purebreak.com.br/articles/1/98/42/1/@/391116-harry-styles-no-set-de-my-policeman-p-114x114-2.jpg",
+    clientName: "Emily Carter",
+    clientImg: "https://randomuser.me/api/portraits/women/65.jpg",
+    rating: 3,
+    review:
+      "The process took a bit longer than expected, but the final outcome was worth it. Their design sensibility and ability to solve technical challenges really stood out.",
+  },
+  {
+    clientName: "Nikhil Verma",
+    clientImg: "https://randomuser.me/api/portraits/men/85.jpg",
     rating: 4,
-    review: "Integer pharetra eros quis dui ultrices, non lobort.",
+    review:
+      "Great communication, clear timelines, and impressive results. This team is highly recommended if you’re looking for quality development with attention to detail.",
   },
   {
-    clientName: "Arijit Singh",
-    clientImg:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPnqCoZ0a6Bd4RvZtMXNzW5zeVm-LL2dOg9A&usqp=CAU",
-    rating: 4,
-    review: `
-    Tu Mera Koyi Na
-    Hoke Bhi Kuchh Laage
-    Tu Mera Koyi Na
-    Hoke Bhi Kuchh Laage
-
-    Kiya Re Jo Bhi Toone
-    Kaise Kiya Re
-    Jiya Ko Mere Baandh
-    Aise Liya Re
-    Kiya Re Jo Bhi Toone
-    Kaise Kiya Re
-    Jiya Ko Mere Baandh
-    Aise Liya Re
-    Kiya Re Jo Bhi Toone
-    Kaise Kiya Re
-    Jiya Ko Mere Baandh
-    Aise Liya Re
-    `,
+    clientName: "Lisa Ray",
+    clientImg: "https://randomuser.me/api/portraits/women/51.jpg",
+    rating: 5,
+    review:
+      "From start to finish, everything was handled with professionalism and passion. The site looks stunning, loads fast, and functions flawlessly across all devices.",
   },
 ];
+
 const a = async function () {
   const res = await fetch(`https://dummyjson.com/users`);
   const data = await res.json();
